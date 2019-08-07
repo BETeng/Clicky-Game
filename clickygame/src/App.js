@@ -11,6 +11,11 @@ class App extends Component {
       record: 0
     }
   }
+  handleScoreChange = () => {
+    this.setState({
+      currentScore: this.state.currentScore+1
+    })
+  }
 
 
   render() {
@@ -23,8 +28,12 @@ class App extends Component {
             record={this.state.record}
           />
           <h2>Click each image only once, if a duplicate is clicked, you lose!!</h2>
-
         </header>
+        <section>
+          <Board
+            scoreChange={this.handleScoreChange}
+          />
+        </section>
 
       </div>
     );
