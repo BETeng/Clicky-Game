@@ -1,6 +1,6 @@
 import React from "react";
-// import MemoryTile from "./components/MemoryTile";
-// import Wrapper from "./components/Wrapper";
+import MemoryTile from "./components/MemoryTile";
+import Wrapper from "./components/Wrapper";
 import Score from "./components/Score";
 import tiles from "./tiles.json";
 import "./App.css";
