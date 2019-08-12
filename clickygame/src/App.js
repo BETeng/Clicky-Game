@@ -22,7 +22,7 @@ class App extends React.Component {
   state = {
     tiles,
     score: 0,
-    message: "Click any tile to start!"
+    message: "Click any pokemon to begin"
   };
 
   
@@ -37,7 +37,7 @@ class App extends React.Component {
       clickedTile.clicked = true;
       let newScore = this.state.score + 1;
       this.setState({ score: newScore });
-      this.setState({ message: "You caught the pokemon" });
+      this.setState({ message: "You caught the pokemon!" });
     }
     let shuffled = shuffleCards(this.state.tiles);
     this.setState({ tiles: shuffled });
@@ -48,6 +48,7 @@ class App extends React.Component {
       <>
         <div className="top">
           <h1 className="title">Pokemon Memory Game</h1>
+          <h3>Click on a pokemon to catch it. You can only catch each pokemon once, catch a duplicate and you lose!</h3>
           <Score score={this.state.score} message={this.state.message} />
         </div>
         <Wrapper>
